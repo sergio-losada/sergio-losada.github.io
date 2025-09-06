@@ -1,0 +1,23 @@
+// Main app component styles
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Ensure smooth scrolling for the entire app
+html {
+  scroll-behavior: smooth;
+}
+
+// Add padding top to account for fixed header
+body {
+  padding-top: 0;
+}
+
+// Override any default margins
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

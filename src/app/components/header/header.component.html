@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">
+        <h2 class="logo-text">Sergio Losada</h2>
+        <span class="logo-subtitle">Software Engineer</span>
+      </div>
+      
+      <ul class="nav-menu" [class.active]="isMenuOpen">
+        <li class="nav-item">
+          <a href="#perfil" class="nav-link" (click)="scrollToSection('perfil', $event)">Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a href="#trayectoria" class="nav-link" (click)="scrollToSection('trayectoria', $event)">Trayectoria</a>
+        </li>
+        <li class="nav-item">
+          <a href="#proyectos" class="nav-link" (click)="scrollToSection('proyectos', $event)">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contacto" class="nav-link" (click)="scrollToSection('contacto', $event)">Contacto</a>
+        </li>
+      </ul>
+      
+      <div class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </div>
+</header>

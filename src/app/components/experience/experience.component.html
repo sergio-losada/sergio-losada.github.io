@@ -1,0 +1,98 @@
+<section id="trayectoria" class="experience-section section">
+  <div class="container">
+    <div class="section-header text-center animate-fade-in-up">
+      <h2 class="section-title">Trayectoria Profesional</h2>
+      <p class="section-subtitle centered-text">Mi experiencia y crecimiento en el mundo del desarrollo de software</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" 
+           *ngFor="let experience of experienceData; let i = index"
+           [class.animate-fade-in-left]="i % 2 === 0"
+           [class.animate-fade-in-right]="i % 2 !== 0">
+        
+        <div class="timeline-marker">
+          <div class="timeline-dot"></div>
+        </div>
+        
+        <div class="timeline-content" [class.timeline-content-right]="i % 2 !== 0">
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="company-info">
+                <div class="company-logo">
+                  <img [src]="experience.companyLogo" [alt]="experience.company" />
+                </div>
+                <div class="company-details">
+                  <h3 class="job-title">{{ experience.position }}</h3>
+                  <h4 class="company-name">{{ experience.company }}</h4>
+                  <div class="location-period">
+                    <span class="location">{{ experience.location }}</span>
+                    <span class="period">{{ experience.period }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="experience-description">
+              <p>{{ experience.description }}</p>
+            </div>
+            
+            <div class="experience-technologies">
+              <div class="tech-tag" *ngFor="let tech of experience.technologies">
+                {{ tech }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="education-section animate-fade-in-up">
+      <h3 class="education-title">Formación Académica</h3>
+      <div class="education-card">
+        <div class="education-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3ZM5 13.18V17.18C5 19.84 8.24 22 12 22C15.76 22 19 19.84 19 17.18V13.18L12 17L5 13.18Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="education-info">
+          <h4 class="degree-title">Graduado en Ingeniería Informática</h4>
+          <p class="degree-specialization">Especialidad en Tecnologías de la Información</p>
+          <p class="university">Universidad de Oviedo</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Languages Section -->
+    <div class="languages-section animate-fade-in-up">
+      <h3 class="languages-title">Idiomas</h3>
+      <div class="languages-grid">
+        <div class="language-item">
+          <div class="language-info">
+            <span class="language-name">Español</span>
+            <span class="language-level">Nativo</span>
+          </div>
+        </div>
+        <div class="language-item">
+          <div class="language-info">
+            <span class="language-name">Inglés</span>
+            <span class="language-level">Cambridge Advanced C1</span>
+          </div>
+          <div class="language-certification">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Certificado</span>
+          </div>
+        </div>
+        <div class="language-item">
+          <div class="language-info">
+            <span class="language-name">Francés</span>
+            <span class="language-level">Nivel Intermedio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

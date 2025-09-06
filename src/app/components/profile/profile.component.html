@@ -1,0 +1,66 @@
+<section id="perfil" class="profile-section section">
+  <div class="container">
+    <div class="profile-content">
+      <div class="profile-image-container animate-fade-in-left">
+        <div class="profile-image-placeholder">
+          <div class="image-placeholder">
+            <img src="assets/profile.PNG" alt="Mi foto de perfil" class="profile-image" />
+          </div>
+        </div>
+        <div class="profile-decoration"></div>
+      </div>
+      
+      <div class="profile-info animate-fade-in-right">
+        <h1 class="profile-name text-gradient">Sergio Losada</h1>
+        <h2 class="profile-title">Ingeniero de Software</h2>
+        
+        <p class="profile-description">
+          {{ profileData.description }}
+        </p>
+        
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Años de Experiencia</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Tecnologías Dominadas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Proyectos Entregados</span>
+          </div>
+        </div>
+        
+        <div class="profile-actions">
+          <a href="#contacto" class="btn btn-primary" (click)="scrollToSection('contacto', $event)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Contactar
+          </a>
+          <a href="{{ profileData.linkedinUrl }}" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z" fill="currentColor"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tech Stack Section -->
+    <div class="tech-stack animate-fade-in-up">
+      <h3 class="tech-title">Stack Tecnológico Principal</h3>
+      <div class="tech-grid">
+        <div class="tech-item" *ngFor="let tech of profileData.techStack">
+          <div class="tech-icon">
+            <img [src]="tech.icon" [alt]="tech.name" />
+          </div>
+          <span class="tech-name">{{ tech.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
