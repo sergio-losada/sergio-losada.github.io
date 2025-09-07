@@ -8,6 +8,7 @@ interface TechItem {
 
 interface ProfileData {
   description: string;
+  caption: string;
   linkedinUrl: string;
   githubUrl: string;
   techStack: TechItem[];
@@ -24,8 +25,9 @@ export class ProfileComponent {
   profileData: ProfileData = {
     description: `Graduado en Ingeniería Informática en Tecnologías de la Información por la Universidad de Oviedo, 
     actualmente trabajando como Ingeniero de Software con experiencia en el desarrollo de soluciones Web FullStack 
-    y despliegue de infraestructuras en la Nube. Especializado en arquitecturas Cloud, Microservicios y DevOps.`,
-    linkedinUrl: 'https://linkedin.com/sergio-losada-gonzalez',
+    y despliegue de infraestructuras en la Nube.`,
+    caption: 'Especializado en arquitecturas Cloud, Microservicios y DevOps.',
+    linkedinUrl: 'https://linkedin.com/in/sergio-losada-gonzalez',
     githubUrl: 'https://github.com/sergio-losada',
     techStack: [
       {

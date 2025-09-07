@@ -75,6 +75,7 @@
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   .section-subtitle {
@@ -82,6 +83,7 @@
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -104,11 +106,11 @@
   position: relative;
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-sm);
 
     .project-overlay {
-      opacity: 1;
+      opacity: 0.5;
     }
 
     .project-mockup {
@@ -226,8 +228,14 @@
     flex-shrink: 0;
 
     .company-logo-small {
-      width: 24px;
-      height: 24px;
+      width: 96px;
+      height: 32px;
+      border-radius: 0.25rem;
+    }
+    
+    .company-logo-short {
+      width: 36px;
+      height: 36px;
       border-radius: 0.25rem;
     }
   }

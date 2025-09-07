@@ -16,15 +16,13 @@ export class HeaderComponent {
   }
 
   scrollToSection(sectionId: string, event: Event) {
-    event.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-    // Close mobile menu after clicking
-    this.isMenuOpen = false;
+  event.preventDefault();
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const yOffset = -60;
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
+  this.isMenuOpen = false;
+}
 }

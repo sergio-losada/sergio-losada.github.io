@@ -9,6 +9,7 @@ interface ProjectStat {
 interface Project {
   title: string;
   company?: string;
+  cssClass?: string;
   companyLogo?: string;
   description: string;
   features: string[];
@@ -39,7 +40,8 @@ export class ProjectsComponent {
     {
       title: 'Ondoan Metriks',
       company: 'Ondoan',
-      companyLogo: 'https://via.placeholder.com/60x60/059669/ffffff?text=OM',
+      cssClass: 'company-logo-small',
+      companyLogo: 'https://www.ondoan.com/soluciones/mantenimiento-de-instalaciones/wp-content/uploads/2019/03/ondoan.png',
       description: 'Dashboard avanzado en Grafana para la gestión de información captada por dispositivos IoT distribuidos en el País Vasco.',
       features: [
         'Monitorización en tiempo real de dispositivos IoT',
@@ -50,7 +52,7 @@ export class ProjectsComponent {
         'Despliegue automatizado'
       ],
       technologies: ['Angular', 'Grafana', 'REST API', 'GitLab CI/CD', 'IoT', 'TypeScript'],
-      mockupUrl: 'https://grafana.com/static/img/grafana/showcase_visualize.jpg',
+      mockupUrl: 'https://grafana.com/static/assets/img/blog/kubernetes_nginx_dash.png',
       stats: [
         { value: '100+', label: 'Dispositivos IoT' },
         { value: '99.9%', label: 'Uptime' },
@@ -60,7 +62,8 @@ export class ProjectsComponent {
     {
       title: 'Tiqe App',
       company: 'Proyecto Personal',
-      companyLogo: 'https://via.placeholder.com/60x60/059669/ffffff?text=TA',
+      cssClass: 'company-logo-short',
+      companyLogo: 'https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/b8/e4/bf/b8e4bf28-c57a-8be4-50c7-046bc54496f3/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/434x0w.webp',
       description: 'Aplicación completa de gestión de gastos para pisos compartidos con dashboard analítico avanzado.',
       features: [
         'Gestión colaborativa de gastos',
@@ -71,11 +74,11 @@ export class ProjectsComponent {
         'Gestión de tickets de gastos'
       ],
       technologies: ['Angular', 'PHP Laravel', 'MySQL', 'TypeScript', 'REST API'],
-      mockupUrl: 'assets/tiqe-mockup.jpeg',
+      mockupUrl: 'https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-9/171550849_168022458508369_3118436008399243020_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=k3X_FW12ssUQ7kNvwHsPIaO&_nc_oc=Adk7o9WjcOfUOpm8dYolrMum7A8DfdAuWFXJW1zDwbOhehMQHJX-kHDr4hAjuWQbPZI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=na3BxJmOuhx-ARR1NTAh3g&oh=00_Afa5e8KiwlJD37FMIY8j_Q5q1_vLE8zfM1eVHeMSa7b6jA&oe=68E4A372',
       stats: [
-        { value: '50+', label: 'Usuarios activos' },
-        { value: '1000+', label: 'Gastos registrados' },
-        { value: '10+', label: 'Pisos gestionados' }
+        { value: '300+', label: 'Usuarios activos' },
+        { value: '3000+', label: 'Gastos registrados' },
+        { value: '100+', label: 'Pisos gestionados' }
       ]
     },
   ];
@@ -85,19 +88,19 @@ export class ProjectsComponent {
       title: 'Portfolio Personal',
       description: 'Página web personal desarrollada en Angular con diseño moderno y responsive.',
       technologies: ['Angular', 'TypeScript', 'SCSS', 'GitHub Pages'],
-      githubUrl: 'https://github.com/sergio-losada'
+      githubUrl: 'https://github.com/sergio-losada/sergio-losada.github.io'
     },
     {
-      title: 'API REST Microservicios',
+      title: 'Microservicio REST API',
       description: 'Arquitectura de microservicios con Spring Boot y contenedores Docker.',
       technologies: ['Java', 'Spring Boot', 'Docker', 'PostgreSQL', 'Jenkins'],
-      githubUrl: 'https://github.com/sergio-losada'
+      githubUrl: 'https://github.com/sergio-losada/Java-Spring-MySQL'
     },
     {
-      title: 'Dashboard Analytics',
-      description: 'Dashboard de analytics en tiempo real con integración de múltiples fuentes de datos.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Chart.js', 'WebSockets'],
-      githubUrl: 'https://github.com/sergio-losada'
+      title: 'Grafos',
+      description: 'Implementación en Java de Teoría de Grafos dirigidos, mediante un Diccionario de adyacentes.',
+      technologies: ['Java', 'Algorithms', 'Graphs', 'CRUD'],
+      githubUrl: 'https://github.com/sergio-losada/Graphs'
     }
   ];
 }
