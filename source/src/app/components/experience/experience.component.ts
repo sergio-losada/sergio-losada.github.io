@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
 
 interface Experience {
   position: string;
@@ -15,7 +16,7 @@ interface Experience {
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollRevealDirective],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })

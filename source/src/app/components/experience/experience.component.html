@@ -1,6 +1,6 @@
 <section id="trayectoria" class="experience-section section">
   <div class="container">
-    <div class="section-header text-center animate-fade-in-up">
+    <div class="section-header text-center" scrollReveal>
       <h2 class="section-title">Trayectoria Profesional</h2>
       <p class="section-subtitle centered-text">Mi experiencia y crecimiento en el Desarrollo de Software</p>
     </div>
@@ -8,8 +8,7 @@
     <div class="timeline">
       <div class="timeline-item" 
            *ngFor="let experience of experienceData; let i = index"
-           [class.animate-fade-in-left]="i % 2 === 0"
-           [class.animate-fade-in-right]="i % 2 !== 0">
+           scrollReveal>
         
         <div class="timeline-marker">
           <div class="timeline-dot"></div>
@@ -51,7 +50,7 @@
     </div>
 
     <!-- Education Section -->
-    <div class="education-section animate-fade-in-up">
+    <div class="education-section" scrollReveal>
       <h3 class="education-title">Formación Académica</h3>
       <div class="education-card">
         <div class="education-icon">
@@ -68,7 +67,7 @@
     </div>
 
     <!-- Languages Section -->
-    <div class="languages-section animate-fade-in-up">
+    <div class="languages-section" scrollReveal>
       <h3 class="languages-title">Idiomas</h3>
       <div class="languages-grid">
         <div class="language-item">

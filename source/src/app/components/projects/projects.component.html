@@ -1,14 +1,14 @@
 <section id="proyectos" class="projects-section section">
   <div class="container">
-    <div class="section-header text-center animate-fade-in-up">
+    <div class="section-header text-center" scrollReveal>
       <h2 class="section-title">Proyectos Destacados</h2>
       <p class="section-subtitle">Una selección de mis proyectos más relevantes</p>
     </div>
 
     <div class="projects-grid">
-      <div class="project-card animate-fade-in-up" 
+      <div class="project-card" 
            *ngFor="let project of projectsData; let i = index"
-           [style.animation-delay.ms]="i * 200">
+           scrollReveal>
         
         <div class="project-image">
           <div class="project-mockup">
@@ -76,7 +76,7 @@
     </div>
 
     <!-- Additional Projects Section -->
-    <div class="additional-projects animate-fade-in-up">
+    <div class="additional-projects" scrollReveal>
       <h3 class="additional-title">Otros Proyectos</h3>
       <div class="additional-grid">
         <div class="additional-project" *ngFor="let project of additionalProjects">

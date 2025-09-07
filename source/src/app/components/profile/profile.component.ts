@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
 
 interface TechItem {
   name: string;
@@ -17,7 +18,7 @@ interface ProfileData {
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollRevealDirective],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss'
 })

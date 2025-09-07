@@ -458,12 +458,19 @@
   }
 
   .project-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+
+    .project-title {
+      flex: 1;
+      margin: 0;
+    }
 
     .project-company {
-      align-self: flex-end;
+      align-self: center;
+      flex-shrink: 0;
     }
   }
 
@@ -493,12 +500,19 @@
     padding: 1.5rem;
 
     .additional-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+
+      .additional-project-title {
+        flex: 1;
+        margin: 0;
+      }
 
       .additional-links {
-        align-self: flex-end;
+        align-self: center;
+        flex-shrink: 0;
       }
     }
   }

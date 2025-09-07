@@ -1,7 +1,7 @@
 <section id="perfil" class="profile-section section">
   <div class="container">
     <div class="profile-content">
-      <div class="profile-image-container animate-fade-in-left">
+      <div class="profile-image-container" scrollReveal>
         <div class="profile-image-placeholder">
           <div class="image-placeholder">
             <img src="assets/profile.PNG" alt="Mi foto de perfil" class="profile-image" />
@@ -10,7 +10,7 @@
         <div class="profile-decoration"></div>
       </div>
       
-      <div class="profile-info animate-fade-in-right">
+      <div class="profile-info" scrollReveal>
         <h1 class="profile-name text-gradient">Sergio Losada</h1>
         <h2 class="profile-title">Ingeniero de Software</h2>
         
@@ -52,7 +52,7 @@
     </div>
     
     <!-- Tech Stack Section -->
-    <div class="tech-stack animate-fade-in-up">
+    <div class="tech-stack" scrollReveal>
       <h3 class="tech-title">Stack Tecnológico Principal</h3>
       <div class="tech-grid">
         <div class="tech-item" *ngFor="let tech of profileData.techStack">

@@ -275,9 +275,28 @@
     flex-direction: column;
     text-align: center;
     gap: 0.75rem;
+    align-items: center;
 
     .contact-icon {
       align-self: center;
+    }
+
+    .contact-details {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .contact-label {
+        text-align: center;
+        align-self: center;
+      }
+
+      .contact-value {
+        text-align: center;
+        align-self: center;
+      }
     }
   }
 
@@ -294,6 +313,8 @@
 
       .btn {
         width: 100%;
+        text-align: center;
+        justify-content: center;
       }
     }
   }

@@ -191,6 +191,40 @@ p {
   animation: pulse 2s infinite;
 }
 
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll reveal variants */
+.scroll-reveal-left.scroll-reveal-hidden {
+  transform: translateX(-50px);
+}
+
+.scroll-reveal-right.scroll-reveal-hidden {
+  transform: translateX(50px);
+}
+
+.scroll-reveal-scale.scroll-reveal-hidden {
+  transform: scale(0.9);
+}
+
+.scroll-reveal-left.scroll-reveal-visible,
+.scroll-reveal-right.scroll-reveal-visible,
+.scroll-reveal-scale.scroll-reveal-visible {
+  transform: translateX(0) scale(1);
+}
+
 /* Card styles */
 .card {
   background: var(--background);
