@@ -3,8 +3,7 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - main  # o la rama que uses
-
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
