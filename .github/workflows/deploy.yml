@@ -24,7 +24,7 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build Angular app
-        run: ng build --configuration production --base-href "/"
+        run: ng build --configuration production --output-path docs --base-href "/"
 
       - name: Add .nojekyll
         run: touch dist/sergio-losada/browser/.nojekyll
@@ -33,4 +33,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist/sergio-losada/browser
+          publish_dir: docs
