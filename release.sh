@@ -5,7 +5,7 @@
 cd source || exit
 
 # Build producción apuntando a ../docs
-ng build --configuration production --output-path ../docs --base-href "/"
+ng build --configuration production --output-path ../docs --base-href ./
 
 # Mover contenido de docs/browser a docs/
 if [ -d ../docs/browser ]; then
