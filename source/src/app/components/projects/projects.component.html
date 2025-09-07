@@ -26,12 +26,12 @@
           </div>
           <div class="project-overlay">
             <div class="project-links">
-              <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" rel="noopener" class="project-link">
+              <!-- <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" rel="noopener" class="project-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11M15 3H21V9M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 Demo
-              </a>
+              </a> -->
               <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" rel="noopener" class="project-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 19C4 20.5 4 16.5 2 16M22 16V22C22 22 17 20 12 22C7 20 2 22 2 22V16C2 16 7 14 12 16C17 14 22 16 22 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -43,13 +43,12 @@
         </div>
 
         <div class="project-content">
-          <div class="project-header">
+          <a [href]="project.demoUrl" target="_blank" class="project-header">
             <h3 class="project-title">{{ project.title }}</h3>
             <div class="project-company" *ngIf="project.company">
               <img [src]="project.companyLogo" [alt]="project.company" [class]="project.cssClass" />
-              <!-- <span>{{ project.company }}</span> -->
             </div>
-          </div>
+          </a>
 
           <p class="project-description">{{ project.description }}</p>
 

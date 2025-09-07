@@ -53,6 +53,7 @@ export class ProjectsComponent {
       ],
       technologies: ['Angular', 'Grafana', 'REST API', 'GitLab CI/CD', 'IoT', 'TypeScript'],
       mockupUrl: 'https://grafana.com/static/assets/img/blog/kubernetes_nginx_dash.png',
+      demoUrl: 'https://www.ondoan.com/plataforma-ondoan-metriks-nuevo-servicio-de-captacion-y-analisis-de-datos',
       stats: [
         { value: '100+', label: 'Dispositivos IoT' },
         { value: '99.9%', label: 'Uptime' },
@@ -75,6 +76,7 @@ export class ProjectsComponent {
       ],
       technologies: ['Angular', 'PHP Laravel', 'MySQL', 'TypeScript', 'REST API'],
       mockupUrl: 'https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-9/171550849_168022458508369_3118436008399243020_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=k3X_FW12ssUQ7kNvwHsPIaO&_nc_oc=Adk7o9WjcOfUOpm8dYolrMum7A8DfdAuWFXJW1zDwbOhehMQHJX-kHDr4hAjuWQbPZI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=na3BxJmOuhx-ARR1NTAh3g&oh=00_Afa5e8KiwlJD37FMIY8j_Q5q1_vLE8zfM1eVHeMSa7b6jA&oe=68E4A372',
+      demoUrl: 'https://tiqe.app/',
       stats: [
         { value: '300+', label: 'Usuarios activos' },
         { value: '3000+', label: 'Gastos registrados' },
