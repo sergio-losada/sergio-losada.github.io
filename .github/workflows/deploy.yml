@@ -27,7 +27,7 @@ jobs:
         run: ng build --configuration production --output-path docs --base-href "/"
 
       - name: Add .nojekyll
-        run: touch dist/sergio-losada/browser/.nojekyll
+        run: touch docs/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
