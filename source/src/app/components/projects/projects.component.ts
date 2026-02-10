@@ -76,7 +76,7 @@ export class ProjectsComponent {
         'Gestión de tickets de gastos'
       ],
       technologies: ['Angular', 'PHP Laravel', 'MySQL', 'TypeScript', 'REST API'],
-      mockupUrl: 'https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-9/171550849_168022458508369_3118436008399243020_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=k3X_FW12ssUQ7kNvwHsPIaO&_nc_oc=Adk7o9WjcOfUOpm8dYolrMum7A8DfdAuWFXJW1zDwbOhehMQHJX-kHDr4hAjuWQbPZI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=na3BxJmOuhx-ARR1NTAh3g&oh=00_Afa5e8KiwlJD37FMIY8j_Q5q1_vLE8zfM1eVHeMSa7b6jA&oe=68E4A372',
+      mockupUrl: 'assets/tiqe.jpg',
       demoUrl: 'https://tiqe.app/',
       stats: [
         { value: '300+', label: 'Usuarios activos' },
@@ -84,7 +84,31 @@ export class ProjectsComponent {
         { value: '100+', label: 'Pisos gestionados' }
       ]
     },
+    {
+      title: 'Taxco App',
+      company: 'Taxco Tortillería',
+      cssClass: 'company-logo-short',
+      companyLogo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT3vqX1zg3bd1FcBdwMBM-WkN0yGcChCX3jg&s',
+      description: 'Aplicación móvil para que los clientes de Taxco Tortillería realicen pedidos de forma rápida, sencilla y segura desde su teléfono.',
+      features: [
+        'Realización de pedidos en segundos',
+        'Consulta del historial de pedidos y facturas',
+        'Exploración del catálogo de productos actualizado',
+        'Acceso 24/7 para gestionar compras en cualquier momento',
+        'Notificaciones de confirmaciones y actualizaciones de pedidos',
+        'Repetición rápida de pedidos recurrentes'
+      ],
+      technologies: ['Flutter', 'TypeScript', 'Supabase', 'REST API'],
+      mockupUrl: 'assets/taxco.png',
+      demoUrl: 'https://apps.apple.com/es/app/taxco-tortiller%C3%ADa/id6753689525',
+      stats: [
+        { value: '50+', label: 'Clientes activos' },
+        { value: '100+', label: 'Pedidos gestionados' },
+        { value: '99.9%', label: 'Uptime Android e iOS' },
+      ]
+    }
   ];
+
 
   additionalProjects: AdditionalProject[] = [
     {
