@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://sergio-losada.github.io/sitemap.xml
