@@ -32,7 +32,7 @@ const FOOTER_TEXT: Record<Language, FooterText> = {
     madeWithConnector: 'y',
   },
   en: {
-    contactTitle: 'Let us talk',
+    contactTitle: 'Let\'s talk',
     contactSubtitle: 'I am open to new projects and opportunities',
     phoneLabel: 'Phone',
     locationLabel: 'Location',
