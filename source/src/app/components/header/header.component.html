@@ -8,23 +8,44 @@
       
       <ul class="nav-menu" [class.active]="isMenuOpen">
         <li class="nav-item">
-          <a href="#perfil" class="nav-link" (click)="scrollToSection('perfil', $event)">Perfil</a>
+          <a href="#profile" class="nav-link" (click)="scrollToSection('profile', $event)">{{ text.navProfile }}</a>
         </li>
         <li class="nav-item">
-          <a href="#trayectoria" class="nav-link" (click)="scrollToSection('trayectoria', $event)">Trayectoria</a>
+          <a href="#experience" class="nav-link" (click)="scrollToSection('experience', $event)">{{ text.navExperience }}</a>
         </li>
         <li class="nav-item">
-          <a href="#proyectos" class="nav-link" (click)="scrollToSection('proyectos', $event)">Proyectos</a>
+          <a href="#projects" class="nav-link" (click)="scrollToSection('projects', $event)">{{ text.navProjects }}</a>
         </li>
         <li class="nav-item">
-          <a href="#contacto" class="nav-link" (click)="scrollToSection('contacto', $event)">Contacto</a>
+          <a href="#contact" class="nav-link" (click)="scrollToSection('contact', $event)">{{ text.navContact }}</a>
         </li>
       </ul>
-      
-      <div class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+
+      <div class="nav-actions">
+        <div class="language-switcher" aria-label="Language selector">
+          <button
+            type="button"
+            class="language-button"
+            [class.active]="currentLanguage === 'es'"
+            (click)="setLanguage('es', $event)"
+          >
+            ES
+          </button>
+          <button
+            type="button"
+            class="language-button"
+            [class.active]="currentLanguage === 'en'"
+            (click)="setLanguage('en', $event)"
+          >
+            EN
+          </button>
+        </div>
+
+        <div class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
     </nav>
   </div>

@@ -1,19 +1,16 @@
-<section id="trayectoria" class="experience-section section">
+<section id="experience" class="experience-section section">
   <div class="container">
     <div class="section-header text-center" scrollReveal>
-      <h2 class="section-title">Trayectoria Profesional</h2>
-      <p class="section-subtitle centered-text">Mi experiencia y crecimiento en el Desarrollo de Software</p>
+      <h2 class="section-title">{{ content.sectionTitle }}</h2>
+      <p class="section-subtitle centered-text">{{ content.sectionSubtitle }}</p>
     </div>
 
     <div class="timeline">
-      <div class="timeline-item" 
-           *ngFor="let experience of experienceData; let i = index"
-           scrollReveal>
-        
+      <div class="timeline-item" *ngFor="let experience of content.experiences; let i = index" scrollReveal>
         <div class="timeline-marker">
           <div class="timeline-dot"></div>
         </div>
-        
+
         <div class="timeline-content" [class.timeline-content-right]="i % 2 !== 0">
           <div class="experience-card">
             <div class="experience-header">
@@ -31,14 +28,14 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="experience-description">
               <p>{{ experience.description }}</p>
             </div>
             <div class="experience-description">
               <p>{{ experience.caption }}</p>
             </div>
-            
+
             <div class="experience-technologies">
               <div class="tech-tag" *ngFor="let tech of experience.technologies">
                 {{ tech }}
@@ -49,9 +46,8 @@
       </div>
     </div>
 
-    <!-- Education Section -->
     <div class="education-section" scrollReveal>
-      <h3 class="education-title">Formación Académica</h3>
+      <h3 class="education-title">{{ content.educationTitle }}</h3>
       <div class="education-card">
         <div class="education-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,39 +55,26 @@
           </svg>
         </div>
         <div class="education-info">
-          <h4 class="degree-title">Graduado en Ingeniería Informática</h4>
-          <p class="degree-specialization">Especialidad en Tecnologías de la Información</p>
-          <p class="university">Universidad de Oviedo</p>
+          <h4 class="degree-title">{{ content.degreeTitle }}</h4>
+          <p class="degree-specialization">{{ content.degreeSpecialization }}</p>
+          <p class="university">{{ content.university }}</p>
         </div>
       </div>
     </div>
 
-    <!-- Languages Section -->
     <div class="languages-section" scrollReveal>
-      <h3 class="languages-title">Idiomas</h3>
+      <h3 class="languages-title">{{ content.languagesTitle }}</h3>
       <div class="languages-grid">
-        <div class="language-item">
+        <div class="language-item" *ngFor="let language of content.spokenLanguages">
           <div class="language-info">
-            <span class="language-name">Español</span>
-            <span class="language-level">Nativo</span>
+            <span class="language-name">{{ language.name }}</span>
+            <span class="language-level">{{ language.level }}</span>
           </div>
-        </div>
-        <div class="language-item">
-          <div class="language-info">
-            <span class="language-name">Inglés</span>
-            <span class="language-level">Cambridge Advanced C1</span>
-          </div>
-          <div class="language-certification">
+          <div class="language-certification" *ngIf="language.certified">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>Certificado</span>
-          </div>
-        </div>
-        <div class="language-item">
-          <div class="language-info">
-            <span class="language-name">Francés</span>
-            <span class="language-level">Nivel Intermedio</span>
+            <span>{{ content.certifiedLabel }}</span>
           </div>
         </div>
       </div>

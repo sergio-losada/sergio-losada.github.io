@@ -1,10 +1,10 @@
-<section id="perfil" class="profile-section section">
+<section id="profile" class="profile-section section">
   <div class="container">
     <div class="profile-content">
       <div class="profile-image-container" scrollReveal>
         <div class="profile-image-placeholder">
           <div class="image-placeholder">
-            <img src="assets/profile.PNG" alt="Mi foto de perfil" class="profile-image" />
+            <img src="assets/profile.PNG" [alt]="text.imageAlt" class="profile-image" />
           </div>
         </div>
         <div class="profile-decoration"></div>
@@ -12,34 +12,26 @@
       
       <div class="profile-info" scrollReveal>
         <h1 class="profile-name text-gradient">Sergio Losada</h1>
-        <h2 class="profile-title">Ingeniero de Software</h2>
+        <h2 class="profile-title">{{ text.jobTitle }}</h2>
         
         <p class="profile-description">
-          {{ profileData.description }} <br><br>
-          <span>{{ profileData.caption }}</span>
+          {{ text.description }} <br><br>
+          <span>{{ text.caption }}</span>
         </p>
         
         <div class="profile-stats">
-          <div class="stat-item">
-            <span class="stat-number">3+</span>
-            <span class="stat-label">Años de Experiencia</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">10+</span>
-            <span class="stat-label">Tecnologías Dominadas</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Proyectos Entregados</span>
+          <div class="stat-item" *ngFor="let stat of text.stats">
+            <span class="stat-number">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
           </div>
         </div>
         
         <div class="profile-actions">
-          <a href="#contacto" class="btn btn-primary" (click)="scrollToSection('contacto', $event)">
+          <a href="#contact" class="btn btn-primary" (click)="scrollToSection('contact', $event)">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Contactar
+            {{ text.contactButton }}
           </a>
           <a href="{{ profileData.linkedinUrl }}" target="_blank" rel="noopener" class="btn btn-secondary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,9 +43,8 @@
       </div>
     </div>
     
-    <!-- Tech Stack Section -->
     <div class="tech-stack" scrollReveal>
-      <h3 class="tech-title">Stack Tecnológico Principal</h3>
+      <h3 class="tech-title">{{ text.techTitle }}</h3>
       <div class="tech-grid">
         <div class="tech-item" *ngFor="let tech of profileData.techStack">
           <div class="tech-icon">
