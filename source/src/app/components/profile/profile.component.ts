@@ -39,7 +39,7 @@ const PROFILE_TEXT: Record<Language, ProfileText> = {
     contactButton: 'Contactar',
     techTitle: 'Stack Tecnologico Principal',
     stats: [
-      { value: '3+', label: 'Anios de Experiencia' },
+      { value: '4+', label: 'Anios de Experiencia' },
       { value: '10+', label: 'Tecnologias Dominadas' },
       { value: '100%', label: 'Proyectos Entregados' },
     ],
@@ -53,7 +53,7 @@ const PROFILE_TEXT: Record<Language, ProfileText> = {
     contactButton: 'Get in touch',
     techTitle: 'Main Tech Stack',
     stats: [
-      { value: '3+', label: 'Years of Experience' },
+      { value: '4+', label: 'Years of Experience' },
       { value: '10+', label: 'Core Technologies' },
       { value: '100%', label: 'Delivered Projects' },
     ],
