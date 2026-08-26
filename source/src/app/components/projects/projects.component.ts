@@ -111,7 +111,7 @@ const PROJECTS_CONTENT: Record<Language, ProjectsContent> = {
           'Panel operativo simple y rapido',
         ],
         technologies: ['Go', 'Angular', 'TypeScript', 'AWS', 'REST API', 'Integrations'],
-        mockupUrl: 'https://gestion.cloudpoint.es/assets/mockup-banner.png',
+        mockupUrl: 'https://cloudpoint.es/assets/mockup.png',
         demoUrl: 'https://apps.apple.com/es/app/cloudpoint/id6798285786',
         stats: [
           { value: '100+', label: 'Usuarios activos' },
@@ -233,7 +233,7 @@ const PROJECTS_CONTENT: Record<Language, ProjectsContent> = {
           'Simple and fast operations dashboard',
         ],
         technologies: ['Go', 'Angular', 'TypeScript', 'AWS', 'REST API', 'Integrations'],
-        mockupUrl: 'https://gestion.cloudpoint.es/assets/mockup-banner.png',
+        mockupUrl: 'https://cloudpoint.es/assets/mockup.png',
         demoUrl: 'https://apps.apple.com/es/app/cloudpoint/id6798285786',
         stats: [
           { value: '100+', label: 'Active users' },
